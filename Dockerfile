@@ -21,7 +21,7 @@ COPY ./tailscale .
 RUN GOOS=linux GOARCH=arm64 go build -o tsidp ./cmd/tsidp
 
 # Run tsidp
-FROM alpine:3.18
+FROM arm64v8/alpine:3.18
 RUN apk add --no-cache ca-certificates iptables iproute2 ip6tables
 
 COPY --from=build-env /go/src/tailscale/tsidp /usr/local/bin/
