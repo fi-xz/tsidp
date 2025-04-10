@@ -18,7 +18,7 @@ RUN go install \
     github.com/mdlayher/netlink
 
 COPY ./tailscale .
-RUN GOOS=linux GOARCH=amd64 go build -o tsidp ./cmd/tsidp
+RUN GOOS=linux GOARCH=arm64 go build -o tsidp ./cmd/tsidp
 
 # Run tsidp
 FROM alpine:3.18
