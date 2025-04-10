@@ -1,6 +1,6 @@
 services:
   tsidp:
-    image: ghcr.io/arunoruto/tsidp:latest
+    image: ghcr.io/fi-xz/tsidp:latest
     container_name: tsidp
     hostname: tsidp
     environment:
